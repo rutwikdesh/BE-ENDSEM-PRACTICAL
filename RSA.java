@@ -13,9 +13,10 @@ class RSA {
         p = sc.nextInt();
         System.out.println("Enter 2nd prime number q");
         q = sc.nextInt();
+        sc.close();
 
-        n = p * q;}
-        \
+        n = p * q;
+        z = (p-1)*(q-1);
         System.out.println("the value of z = " + z);
 
         for (e = 2; e < z; e++) {
@@ -39,13 +40,13 @@ class RSA {
         System.out.println(c);
         // converting int value of n to BigInteger
         BigInteger N = BigInteger.valueOf(n);
-        /  / converting float value of c to BigInteger
+        // converting float value of c to BigInteger
         BigInteger C = BigDecimal.valueOf(c).toBigInteger();
         msgback = (C.pow(d)).mod(N);
         System.out.println("Derypted message is : -");
         System.out.println(msgback);
 
-        sc.close();
+        
     }
 
     static int gcd(int e, int z) {
