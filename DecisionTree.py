@@ -6,7 +6,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import export_graphviz
 from IPython.display import Image
 
-le=LabelEncoder();
+le=LabelEncoder()
 data = pd.read_csv("data.csv")
 data=data.apply(le.fit_transform)
 
