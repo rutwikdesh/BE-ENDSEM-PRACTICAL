@@ -17,9 +17,9 @@ print("\nIncome:",list( zip(data.iloc[:,1], x.iloc[:,1])))
 print("\nGender:",list( zip(data.iloc[:,2], x.iloc[:,2])))
 print("\nmaritialStatus:",list( zip(data.iloc[:,3], x.iloc[:,3])))
 
-print(x)
+
 y=data.iloc[:,-1]
-print(y)
+
 dt=DecisionTreeClassifier()
 dt.fit(x,y)
 
